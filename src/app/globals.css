@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc; /* A very light slate gray */
+  --foreground: #0f172a; /* A dark slate for text */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+"Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
