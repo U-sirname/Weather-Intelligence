@@ -63,11 +63,28 @@ export default function WeatherApp() {
  const handleKeyDown = (e) => {
     if (e.key === 'Enter') handleSearch();
   };
+
+  const themeMap = {
+  Clear: "from-blue-400 to-blue-600",
+  Clouds: "from-gray-400 to-blue-500",
+  Rain: "from-blue-700 to-slate-900",
+  Drizzle: "from-cyan-600 to-blue-800",
+  Thunderstorm: "from-purple-900 to-slate-900",
+  Snow: "from-blue-100 to-blue-300",
+  Default: "from-blue-500 to-blue-800" // Starting with a clear sky
+};
+
+  // Get the current weather type, or 'Default' if no search has happened yet
+const currentWeatherType = weather ? weather.weather[0].main : 'Default';
+const backgroundGradient = themeMap[currentWeatherType] || themeMap.Default;
+  
   return (
-    
-    <div className="max-w-md mx-auto mt-20 p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-      <h1 className="text-2xl font-bold text-slate-800 mb-4 text-center">Weather Intelligence</h1>
-      
+<div className={`min-h-screen transition-all duration-1000 bg-gradient-to-br ${backgroundGradient} text-white p-4 md:p-8`}>
+  <div className="max-w-md mx-auto mt-10 p-6 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 text-slate-800">
+    <h1 className="text-2xl font-black text-slate-900 mb-4 text-center tracking-tight">
+      WEATHER INTELLIGENCE
+    </h1>    
+  
     <div className="flex flex-col gap-2 mb-6">
       <div className="flex gap-2">
         <input 
@@ -129,5 +146,6 @@ export default function WeatherApp() {
         </div>
       )}
     </div>
-  );
+  </div>
+);
 }
