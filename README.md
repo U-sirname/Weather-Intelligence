@@ -15,3 +15,12 @@ A modern, responsive weather intelligence application built for the **PM Acceler
 - **Icons:** Lucide React
 - **State Management:** React Hooks (`useState`, `useEffect`)
 
+🚀 To Run locally:
+
+Clone the repo
+
+Run npm install
+
+Add your API Key to .env.local (check .env.example file)
+
+Run npm run dev
