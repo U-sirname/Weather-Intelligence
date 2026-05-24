@@ -23,8 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-gradient-to-b from-slate-50 to-slate-100 text-slate-900 transition-colors duration-500">
-        
+      <body className="min-h-full flex flex-col bg-gray-900 text-white transition-colors duration-500">        
         {/* Main Content Area */}
         {/* pb-20 ensures the content never overlaps with the footer on small screens */}
         <main className="flex-grow pb-20">
@@ -55,7 +54,7 @@ export default function RootLayout({ children }) {
               
               <div className="pt-2">
                 <a 
-                  href="https://www.linkedin.com/company/product-manager-accelerator/" 
+                  href="https://www.linkedin.com/in/drnancyli/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition-all duration-200 group"
